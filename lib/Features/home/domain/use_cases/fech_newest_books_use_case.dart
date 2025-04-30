@@ -6,7 +6,7 @@ import 'package:dartz/dartz.dart';
 
 class FechNewestBooksUseCase {
   HomeRepo homeRepo;
-
+ 
   FechNewestBooksUseCase(this.homeRepo);
   Future<Either<Failure, List<BookEntity>>> call([NoParams? params]) async {
     return await homeRepo.fetchNewsetBooks();
