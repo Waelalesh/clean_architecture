@@ -4,7 +4,7 @@ part 'retail_price.g.dart';
 
 @JsonSerializable()
 class RetailPrice {
-  double? amount;
+  num? amount;
   String? currencyCode;
 
   RetailPrice({this.amount, this.currencyCode});
@@ -16,7 +16,7 @@ class RetailPrice {
   Map<String, dynamic> toJson() => _$RetailPriceToJson(this);
 
   RetailPrice copyWith({
-    double? amount,
+    num? amount,
     String? currencyCode,
   }) {
     return RetailPrice(

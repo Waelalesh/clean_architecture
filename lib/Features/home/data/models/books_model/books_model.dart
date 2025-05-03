@@ -1,3 +1,4 @@
+import 'package:bookly/Features/home/domain/entities/book_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'access_info.dart';
@@ -8,7 +9,7 @@ import 'volume_info.dart';
 part 'books_model.g.dart';
 
 @JsonSerializable()
-class BooksModel {
+class BooksModel extends BookEntity {
   String? kind;
   String? id;
   String? etag;
@@ -27,7 +28,14 @@ class BooksModel {
     this.saleInfo,
     this.accessInfo,
     this.searchInfo,
-  });
+  }) : super(
+          price: saleInfo?.listPrice?.amount ?? 0.0,
+          autherName: volumeInfo?.authors?.first ?? "No Auther",
+          bookId: id!,
+          rating: num.parse(volumeInfo?.maturityRating ?? "0.0"),
+          title: volumeInfo?.title ?? "No Title",
+          image: volumeInfo?.imageLinks?.thumbnail ?? "",
+        );
 
   factory BooksModel.fromJson(Map<String, dynamic> json) {
     return _$BooksModelFromJson(json);

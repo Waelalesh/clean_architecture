@@ -7,7 +7,7 @@ part of 'list_price.dart';
 // **************************************************************************
 
 ListPrice _$ListPriceFromJson(Map<String, dynamic> json) => ListPrice(
-      amount: (json['amount'] as num?)?.toDouble(),
+      amount: json['amount'] as num?,
       currencyCode: json['currencyCode'] as String?,
     );
 

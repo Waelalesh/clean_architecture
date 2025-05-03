@@ -7,7 +7,7 @@ part 'offer.g.dart';
 
 @JsonSerializable()
 class Offer {
-  int? finskyOfferType;
+  num? finskyOfferType;
   ListPrice? listPrice;
   RetailPrice? retailPrice;
 
@@ -18,7 +18,7 @@ class Offer {
   Map<String, dynamic> toJson() => _$OfferToJson(this);
 
   Offer copyWith({
-    int? finskyOfferType,
+    num? finskyOfferType,
     ListPrice? listPrice,
     RetailPrice? retailPrice,
   }) {

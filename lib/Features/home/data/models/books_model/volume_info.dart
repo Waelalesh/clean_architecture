@@ -17,7 +17,7 @@ class VolumeInfo {
   String? description;
   List<IndustryIdentifier>? industryIdentifiers;
   ReadingModes? readingModes;
-  int? pageCount;
+  num? pageCount;
   String? printType;
   List<String>? categories;
   String? maturityRating;
@@ -68,7 +68,7 @@ class VolumeInfo {
     String? description,
     List<IndustryIdentifier>? industryIdentifiers,
     ReadingModes? readingModes,
-    int? pageCount,
+    num? pageCount,
     String? printType,
     List<String>? categories,
     String? maturityRating,

@@ -20,7 +20,7 @@ VolumeInfo _$VolumeInfoFromJson(Map<String, dynamic> json) => VolumeInfo(
       readingModes: json['readingModes'] == null
           ? null
           : ReadingModes.fromJson(json['readingModes'] as Map<String, dynamic>),
-      pageCount: (json['pageCount'] as num?)?.toInt(),
+      pageCount: json['pageCount'] as num?,
       printType: json['printType'] as String?,
       categories: (json['categories'] as List<dynamic>?)
           ?.map((e) => e as String)

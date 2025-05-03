@@ -4,7 +4,7 @@ part 'list_price.g.dart';
 
 @JsonSerializable()
 class ListPrice {
-  double? amount;
+  num? amount;
   String? currencyCode;
 
   ListPrice({this.amount, this.currencyCode});
@@ -16,7 +16,7 @@ class ListPrice {
   Map<String, dynamic> toJson() => _$ListPriceToJson(this);
 
   ListPrice copyWith({
-    double? amount,
+    num? amount,
     String? currencyCode,
   }) {
     return ListPrice(

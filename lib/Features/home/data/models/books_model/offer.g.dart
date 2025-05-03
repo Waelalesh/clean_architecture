@@ -7,7 +7,7 @@ part of 'offer.dart';
 // **************************************************************************
 
 Offer _$OfferFromJson(Map<String, dynamic> json) => Offer(
-      finskyOfferType: (json['finskyOfferType'] as num?)?.toInt(),
+      finskyOfferType: json['finskyOfferType'] as num?,
       listPrice: json['listPrice'] == null
           ? null
           : ListPrice.fromJson(json['listPrice'] as Map<String, dynamic>),
